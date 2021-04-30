@@ -5,6 +5,7 @@ class Scraper
   def self.scrape_index_page(index_url)
     doc=Nokogiri::HTML(open(index_url))
     array=[]
+    
     students=doc.css("div.student-card")
     students.each do |student|
       hash={}
